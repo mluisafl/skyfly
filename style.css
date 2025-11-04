@@ -1,0 +1,168 @@
+ :root{
+            --gap-side: 16px;
+            --max-width: 90em;
+            --nav-height: 5em;
+            --nav-radius: 1em;
+            --nav-bg: rgba(255,255,255,0.95);
+            --nav-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        /* reset simples */
+        *{box-sizing: border-box; margin: 0; padding: 0}
+        body{
+            background: linear-gradient(#eef2ff, #f8fafc);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            line-height: 1.5;
+        }
+
+        /* Navbar fixa com laterais arredondadas e centralizada */
+        .topbar{
+            align-items: center;
+            backdrop-filter: blur(6px); /* efeito agradável em navegadores modernos */
+            background: var(--nav-bg);
+            border-radius: var(--nav-radius);
+            box-shadow: var(--nav-shadow);
+            display: flex;
+            height: var(--nav-height);
+            left: 50%;
+            max-width: var(--max-width);
+            position: fixed;
+            padding: 0 2em;
+            top: 12px; /* pode definir 0 se quiser colada ao topo */
+            transform: translateX(-50%);
+            width: calc(100% - (var(--gap-side) * 2));
+            z-index: 1000;
+        }
+
+        .topbar .logo{
+            color: #0f172a;
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-right: 2.4em;
+            text-decoration: none;
+        }
+
+        .nav-links{
+            display: flex;
+            gap: 1em;
+            height: 2em;
+            list-style: none;
+            margin-left: auto;  
+              
+        }
+
+        .nav-links a{
+            border-radius: 0.8em;
+            color: #0f172a;
+            display: flex;
+            padding: 0.6em 1em;
+            text-decoration: none;
+            transition: background .18s, color .18s;
+        }
+
+        .nav-links a .bi{
+            display: inline-block;
+            margin-right: 0.8em;          
+        }
+
+        .nav-links a:hover{
+            background: rgba(15,23,42,0.06);  
+        }
+
+        .imagem-principal {
+            border-radius: 0;
+            background-image: url('./src/image/house.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 50em;
+            padding: 2em;
+
+        }
+
+        .card {
+            border-radius: 1em;
+            border: 1px  rgb(209, 207, 207); /* Adicionado 'solid' que faltava */
+            box-sizing: border-box;
+            box-shadow: 0 0.4em 1.2em rgba(192, 191, 191, 0.04);
+            height: 100%; /* Garante que o CSS personalizado honre a classe h-100 do HTML */
+            overflow: hidden;
+            padding: 20px;
+            transition: transform .12s, box-shadow .12s;
+        }
+
+        .card-img-top {
+            border-radius: 0.6em;
+            height: 14em;       
+            object-fit: cover;    
+            width: 100%;
+        }
+
+        .btn-signup{
+            background: #252527;
+            border-radius: 1em;
+            box-shadow: 0 0.8em 2.0em rgba(14,165,233,0.12);
+            color: white !important;
+            font-weight: 600;
+            padding: 0.8em 1em;
+            text-decoration: none;
+            transition: transform .12s, box-shadow .12s;
+        }
+
+        /*
+        
+        .btn-signup:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(14,165,233,0.14); }
+
+        seção de cadastro mínima 
+        #signup{
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 18px;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.04);
+        }
+
+        .signup-form{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            max-width:560px;
+        }
+
+        .signup-form input{
+            padding:10px 12px;
+            border-radius:8px;
+            border:1px solid #e6e6e6;
+            font-size:14px;
+        }
+
+        .signup-form button{
+            background:#06b6d4;
+            color:#fff;
+            padding:10px 12px;
+            border-radius:8px;
+            border:none;
+            font-weight:600;
+            cursor:pointer;
+        }
+
+        .signup-note{ font-size:13px; color:#6b7280; margin-top:6px; }
+        conteúdo de exemplo para testar rolagem */
+        
+        main{
+            margin: 0 auto;
+            max-width: var(--max-width);
+            padding: 24px;
+        }
+
+        section{
+            background: white;
+            border-radius: 1em;
+            box-shadow: 0 0.4em 1.2em rgba(2,6,23,0.04);
+            margin-bottom: 1.8em;
+            padding: 2.0em;
+        }
+
+        h1{margin-bottom: 1.2em}
+        p{color:#334155}

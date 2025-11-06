@@ -1,13 +1,13 @@
  :root{
             --gap-side: 16px;
+            --image-filter: grayscale(100%);
             --max-width: 90em;
             --nav-height: 5em;
-            --nav-radius: 1em;
+            --nav-radius: 0.8em;
             --nav-bg: rgba(255,255,255,0.95);
             --nav-shadow: 0 6px 18px rgba(0,0,0,0.12);
         }
 
-        /* reset simples */
         *{box-sizing: border-box; margin: 0; padding: 0}
         body{
             background: linear-gradient(#eef2ff, #f8fafc);
@@ -15,27 +15,26 @@
             line-height: 1.5;
         }
 
-        /* Navbar fixa com laterais arredondadas e centralizada */
         .topbar{
             align-items: center;
-            backdrop-filter: blur(6px); /* efeito agradável em navegadores modernos */
-            background: var(--nav-bg);
+            backdrop-filter: blur(6px); 
             border-radius: var(--nav-radius);
             box-shadow: var(--nav-shadow);
             display: flex;
             height: var(--nav-height);
+            justify-content: flex-start;
             left: 50%;
             max-width: var(--max-width);
             position: fixed;
             padding: 0 2em;
-            top: 12px; /* pode definir 0 se quiser colada ao topo */
+            top: 12px;
             transform: translateX(-50%);
             width: calc(100% - (var(--gap-side) * 2));
             z-index: 1000;
         }
 
         .topbar .logo{
-            color: #0f172a;
+            color: #000000;
             font-size: 1.8em;
             font-weight: 700;
             letter-spacing: 0.1em;
@@ -43,12 +42,16 @@
             text-decoration: none;
         }
 
+
         .nav-links{
+            align-items: center;
             display: flex;
-            gap: 1em;
-            height: 2em;
+            height: 100%;
+            gap: 0.6rem;
             list-style: none;
+            margin: 0 0 0 1rem;
             margin-left: auto;  
+            padding: 0;
               
         }
 
@@ -58,7 +61,7 @@
             display: flex;
             padding: 0.6em 1em;
             text-decoration: none;
-            transition: background .18s, color .18s;
+            transition: background .18s, black .18s;
         }
 
         .nav-links a .bi{
@@ -70,15 +73,85 @@
             background: rgba(15,23,42,0.06);  
         }
 
-        .imagem-principal {
+        .img-principal {
             border-radius: 0;
-            background-image: url('./src/image/house.jpg');
+            background-image: url('./src/image/img-principal.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
             min-height: 50em;
             padding: 2em;
+            transition: filter 0.5s ease-in-out;
+        }
 
+        .img-principal:hover {
+            filter: grayscale(0%);
+        }
+
+        .conteudo-principal {
+            display: flex;              
+            justify-content: center;     
+            align-items: center;        
+            flex-direction: column;     
+            text-align: center;          
+            padding: 15em;                            
+        }
+
+        .tips-section {
+            margin: 3rem auto;
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+            max-width: var(--max-width);
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+
+        .img-tips:hover .img-top-tips {
+            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
+        }
+
+        .img-tips:hover .img-bottom-tips {
+            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
+            transition-delay: 0.2s; /* delay de 0.2s para a imagem de baixo */
+        }
+
+        .text-tips {
+            flex: 1;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .img-tips {
+            flex: 1;
+            position: relative;
+            height: 500px;
+            transition: transform 0.5s ease;
+        }
+
+        .img-top-tips, .img-bottom-tips {
+            border-radius: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            display: block;
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            transition: transform 0.5s ease;
+        } 
+
+        .img-top-tips {
+            right: 0;
+            top: 0;
+            z-index: 2;
+        }
+
+        .img-bottom-tips {
+            left: 0;
+            bottom: 0;
+            z-index: 0;
         }
 
         .card {
@@ -91,13 +164,20 @@
             padding: 20px;
             transition: transform .12s, box-shadow .12s;
         }
+        
+        .card:hover .card-img {
+            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
+        }
 
-        .card-img-top {
+        .card-img {
             border-radius: 0.6em;
             height: 14em;       
-            object-fit: cover;    
+            object-fit: cover;
+            transition: transform 0.5s ease;    
             width: 100%;
         }
+
+
 
         .btn-signup{
             background: #252527;
@@ -110,46 +190,6 @@
             transition: transform .12s, box-shadow .12s;
         }
 
-        /*
-        
-        .btn-signup:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(14,165,233,0.14); }
-
-        seção de cadastro mínima 
-        #signup{
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 18px;
-            box-shadow: 0 6px 18px rgba(2,6,23,0.04);
-        }
-
-        .signup-form{
-            display:flex;
-            flex-direction:column;
-            gap:10px;
-            max-width:560px;
-        }
-
-        .signup-form input{
-            padding:10px 12px;
-            border-radius:8px;
-            border:1px solid #e6e6e6;
-            font-size:14px;
-        }
-
-        .signup-form button{
-            background:#06b6d4;
-            color:#fff;
-            padding:10px 12px;
-            border-radius:8px;
-            border:none;
-            font-weight:600;
-            cursor:pointer;
-        }
-
-        .signup-note{ font-size:13px; color:#6b7280; margin-top:6px; }
-        conteúdo de exemplo para testar rolagem */
-        
         main{
             margin: 0 auto;
             max-width: var(--max-width);

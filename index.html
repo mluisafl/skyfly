@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    
+    <link rel="stylesheet" href="./script.js">
+
     <title>SKYFLY</title>
 </head>
 
@@ -17,19 +19,61 @@
         <nav class="topbar" aria-label="Barra de navegação">
             <a class="logo" href="#">SKYFLY</a>
             <ul class="nav-links" role="menubar">
-                <li role="none"><a role="menuitem" href="#home"><i class="bi bi-house-fill"></i>Home</a></li>
-                <li role="none"><a role="menuitem" href="#sobre"><i class="bi bi-exclamation-circle-fill"></i>Sobre</a></li>
-                <li role="none"><a role="menuitem" href="#contato"><i class="bi bi-person-lines-fill"></i>Contato</a></li>
-                <li role="none"><a role="menuitem" href="#servico"><i class="bi bi-briefcase-fill"></i>Serviço</a></li>
+                <li role="none"><a role="menuitem" href=""><i class="bi bi-house-fill"></i>Home</a></li>
+
+                <li role="none"><a role="menuitem" href="#sobre"><i class="bi bi-exclamation-circle-fill"></i>Sobre</a>
+                </li>
+
+                <li role="none"><a role="menuitem" href="#servico"><i
+                            class="bi bi-airplane-engines-fill"></i>Destinos</a></li>
+
+                <li role="none"><a role="menuitem" href="#contato"><i class="bi bi-person-lines-fill"></i>Contato</a>
+                </li>
+
                 <li role="none"><a class="btn-signup" role="menuitem" href="#signup">Login</a></li>
             </ul>
         </nav>
     </header>
     <!-- IMAGEM PRINCIPAL -->
-    <section class="imagem-principal">
-
+    <section class="img-principal">
         <div class="conteudo-principal">
-            <h1></h1>
+            <h1>Trazendo mais cor a sua sua viagem</h1>
+            <p>Descubra destinos únicos e crie memórias inesquecíveis com a SKYFLY. Nossa missão é tornar suas viagens
+                mais do que apenas deslocamentos - são experiências que transformam vidas.</p>
+            <p>Com mais de 10 anos de experiência, oferecemos:</p>
+            <ul>
+                <li>Roteiros exclusivos e personalizados</li>
+                <li>Suporte 24/7 durante sua viagem</li>
+                <li>Hospedagens criteriosamente selecionadas</li>
+                <li>Guias locais experientes</li>
+            </ul>
+        </div>
+    </section>
+    <!-- DICAS DE TURISMO -->
+    <section>
+        <div class="tips-section">
+                <div class="text-tips">
+                    <h2>TOP DESTINOS</h2>
+                    <h3>Noruega</h3>
+                    <p>
+                        - A Caçada à Aurora Boreal
+                        Destino: Tromsø, Noruega (Círculo Polar Ártico)
+                        Objetivo da Viagem: Testemunhar as Luzes do Norte, Cultura Ártica e Atividades de Neve
+                        Público-Alvo: Casais (viagem romântica), fotógrafos, aventureiros (que toleram o frio).
+                        Duração Recomendada: 6 Dias
+                        Vibe: Mágico, ártico, frio intenso, silencioso e contemplativo.
+                    </p>
+                    <h4>Melhor Época para Ir:</h4>
+                    
+                        <p></p>Inverno (Novembro à Março)É necessário que as noites sejam longas e muito escuras. Janeiro e Fevereiro
+                        costumam ter mais neve, tornando a paisagem ainda mais bonita.
+                    </p>
+                    
+                </div>
+                <div class="img-tips" aria-hidden="false">
+                        <img src="./src/image/tromso1.jpg" alt="Destino turístico 1" class="img-top-tips">
+                        <img src="./src/image/tromso2.jpg" alt="Destino turístico 2" class="img-bottom-tips">
+                </div>
         </div>
     </section>
 
@@ -38,43 +82,67 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="./src/image/alaska.jpg" class="card-img-top" alt="...">
+                    <img src="./src/image/alaska.jpg" class="card-img" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Alasca</h5>
-                        <p class="card-text">O Alasca é o maior estado dos Estados Unidos em território e é conhecido por sua natureza selvagem, intocada e vasta. Banhado pelo Oceano Pacífico e Ártico, é um lugar de paisagens impressionantes, com montanhas majestosas, geleiras imponentes e uma vida selvagem abundante. Originalmente colonizado por exploradores russos, foi vendido aos EUA em 1867. Sua economia é fortemente baseada na extração de petróleo e gás natural, que representam a maioria das receitas do estado.</p>
+                        <p class="card-text">O Alasca é o maior estado dos Estados Unidos em território e é conhecido
+                            por sua natureza selvagem, intocada e vasta. Banhado pelo Oceano Pacífico e Ártico, é um
+                            lugar de paisagens impressionantes, com montanhas majestosas, geleiras imponentes e uma vida
+                            selvagem abundante. Originalmente colonizado por exploradores russos, foi vendido aos EUA em
+                            1867. Sua economia é fortemente baseada na extração de petróleo e gás natural, que
+                            representam a maioria das receitas do estado.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./src/image/noruega.jpg" class="card-img-top" alt="...">
+                    <img src="./src/image/noruega.jpg" class="card-img" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Noruega</h5>
-                        <p class="card-text">A Noruega é um país nórdico conhecido por seus espetaculares fiordes, montanhas, e como um dos países com maior igualdade de gênero no mundo. É uma monarquia constitucional e sua principal fonte de renda nacional é a extração e exportação de petróleo e gás offshore. Os noruegueses valorizam um estilo de vida simples, com forte conexão com a natureza e atividades ao ar livre, como caminhadas e esqui.</p>
+                        <p class="card-text">A Noruega é um país nórdico conhecido por seus espetaculares fiordes,
+                            montanhas, e como um dos países com maior igualdade de gênero no mundo. É uma monarquia
+                            constitucional e sua principal fonte de renda nacional é a extração e exportação de petróleo
+                            e gás offshore. Os noruegueses valorizam um estilo de vida simples, com forte conexão com a
+                            natureza e atividades ao ar livre, como caminhadas e esqui.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./src/image/setubal.jpg" class="card-img-top" alt="...">
+                    <img src="./src/image/setubal.jpg" class="card-img" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Setúbal</h5>
-                        <p class="card-text">Localizada a cerca de 50 km de Lisboa, na área metropolitana da capital, Setúbal é uma cidade histórica à beira-mar, no estuário do rio Sado. Com séculos de história que remontam aos tempos romanos, a cidade se desenvolveu como um importante centro comercial e industrial, conhecido por sua produção de sal e, mais tarde, por suas indústrias de pesca e conservas. Um prato típico da região é o famoso "choco frito". A cidade é acessível por comboio (trem) a partir de Lisboa, sendo uma opção popular de residência para quem trabalha na capital portuguesa. </p>
+                        <p class="card-text">Localizada a cerca de 50 km de Lisboa, na área metropolitana da capital,
+                            Setúbal é uma cidade histórica à beira-mar, no estuário do rio Sado. Com séculos de história
+                            que remontam aos tempos romanos, a cidade se desenvolveu como um importante centro comercial
+                            e industrial, conhecido por sua produção de sal e, mais tarde, por suas indústrias de pesca
+                            e conservas. Um prato típico da região é o famoso "choco frito". A cidade é acessível por
+                            comboio (trem) a partir de Lisboa, sendo uma opção popular de residência para quem trabalha
+                            na capital portuguesa. </p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="./src/image/vienna.jpg" class="card-img-top" alt="...">
+                    <img src="./src/image/vienna.jpg" class="card-img" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Viena</h5>
-                        <p class="card-text">Viena é a elegante e sofisticada capital da Áustria, reconhecida mundialmente como a "capital da música clássica". Foi lar de gênios como Mozart, Beethoven e Strauss, e sua identidade cultural é profundamente marcada por concertos e óperas. A cidade exala história e arte, sendo a herança do poderoso Império Austro-Húngaro visível em sua arquitetura imperial, palácios e museus. Viena é consistentemente classificada como uma das melhores cidades do mundo para se viver.</p>
+                        <h5 class="card-title">Vienna</h5>
+                        <p class="card-text">Vienna é a elegante e sofisticada capital da Áustria, reconhecida
+                            mundialmente como a "capital da música clássica". Foi lar de gênios como Mozart, Beethoven e
+                            Strauss, e sua identidade cultural é profundamente marcada por concertos e óperas. A cidade
+                            exala história e arte, sendo a herança do poderoso Império Austro-Húngaro visível em sua
+                            arquitetura imperial, palácios e museus. Viena é consistentemente classificada como uma das
+                            melhores cidades do mundo para se viver.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!--SRC= FAZ COM QUE FUNCIONE O BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

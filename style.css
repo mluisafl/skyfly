@@ -4,11 +4,17 @@
             --max-width: 90em;
             --nav-height: 5em;
             --nav-radius: 0.8em;
-            --nav-bg: rgba(255,255,255,0.95);
-            --nav-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            --nav-bg: rgba(255, 255, 255, 0);
+            --nav-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+            /* DIMENSÕES DA IMAGEM E CLIP-PATH */
+            --img-w: 1408px;
+            --img-h: 480px;
+            --r-corner: 40px; 
+            --r-bottom: 47px;
         }
 
         *{box-sizing: border-box; margin: 0; padding: 0}
+
         body{
             background: linear-gradient(#eef2ff, #f8fafc);
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -17,6 +23,7 @@
 
         .topbar{
             align-items: center;
+            background: var(--nav-bg);
             backdrop-filter: blur(6px); 
             border-radius: var(--nav-radius);
             box-shadow: var(--nav-shadow);
@@ -49,7 +56,7 @@
             height: 100%;
             gap: 0.6rem;
             list-style: none;
-            margin: 0 0 0 1rem;
+            margin: 0;
             margin-left: auto;  
             padding: 0;
               
@@ -61,7 +68,7 @@
             display: flex;
             padding: 0.6em 1em;
             text-decoration: none;
-            transition: background .18s, black .18s;
+            transition: background .18s, .18s;
         }
 
         .nav-links a .bi{
@@ -70,42 +77,85 @@
         }
 
         .nav-links a:hover{
-            background: rgba(15,23,42,0.06);  
+            background: rgba(0, 0, 0, 0.06);  
         }
 
         .img-principal {
-            border-radius: 0;
+            align-items: center;
             background-image: url('./src/image/img-principal.jpg');
             background-size: cover;
-            background-position: center center;
+            background-position: center;
             background-repeat: no-repeat;
-            min-height: 50em;
-            padding: 2em;
-            transition: filter 0.5s ease-in-out;
-        }
-
-        .img-principal:hover {
-            filter: grayscale(0%);
+            border-radius: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+            clip-path: path("M40,0H1368A40,40 0,0,1 1408,40V440A40,40 0,0,1 1368,480H497A47,47 0,0,1 450,433V427A47,47 0,0,0 403,380H47A47,47 0,0,1 0,333V40A40,40 0,0,1 40,0Z");
+            width: 1408px;
+            height: 480px;
+            background-color: #dedede;
+            aspect-ratio: 44 / 15;
+            mask-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            left: 50%;
+            margin: 0;
+            max-width: var(--max-width);
+            position: relative;
+            overflow: hidden;
+            width: calc(100% - (var(--gap-side) * 2));
+            top: calc(var(--nav-height) + 2.4em);
+            transform: translateX(-50%);
         }
 
         .conteudo-principal {
+            position: relative;
             display: flex;              
             justify-content: center;     
             align-items: center;        
-            flex-direction: column;     
-            text-align: center;          
-            padding: 15em;                            
+            flex-direction: column;           
+            padding: 2em;                           
         }
 
+        .conteudo-principal .img- {
+            /* Faz deste div a referência para o botão absoluto */
+            position: relative; 
+            width: 100%;
+            /* Limita a largura à variável global definida */
+            max-width: var(--max-width); 
+            /* Garante espaço para o botão que fica abaixo */
+            margin-bottom: 50px;    
+        }
+
+        .btn-explore{
+            /* POSICIONAMENTO */
+            position: absolute;
+            bottom: 8.5em; /* 20px acima da base do contêiner pai */
+            z-index: 5%; /* Garante que fique acima de outros elementos */
+           
+            /* ESTILIZAÇÃO */
+            background-color: #A0AA29; /* Laranja da imagem */
+            color: white;
+            padding: 2em 6em;
+            border: none;
+            cursor: pointer;
+            font-weight: 100;
+            
+            /* Formato: Arredondamento maior na direita para simular o da foto */
+            border-radius: 3em; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+
         .tips-section {
-            margin: 3rem auto;
-            padding: 2rem;
+            margin: 4rem auto;
+            padding: 3rem;
             display: flex;
             gap: 2rem;
             max-width: var(--max-width);
             align-items: center;
             justify-content: space-between;
             box-sizing: border-box;
+            box-shadow: 0 0.4em 1.2em rgba(2,6,23,0.04);
+            border-radius: 1em;
         }
 
         .img-tips:hover .img-top-tips {
@@ -156,17 +206,17 @@
 
         .card {
             border-radius: 1em;
-            border: 1px  rgb(209, 207, 207); /* Adicionado 'solid' que faltava */
+            border: 1px solid rgb(209, 207, 207); 
             box-sizing: border-box;
             box-shadow: 0 0.4em 1.2em rgba(192, 191, 191, 0.04);
-            height: 100%; /* Garante que o CSS personalizado honre a classe h-100 do HTML */
+            height: 100%; 
             overflow: hidden;
             padding: 20px;
             transition: transform .12s, box-shadow .12s;
         }
         
         .card:hover .card-img {
-            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
+            transform: scale(1.1); 
         }
 
         .card-img {
@@ -179,17 +229,7 @@
 
 
 
-        .btn-signup{
-            background: #252527;
-            border-radius: 1em;
-            box-shadow: 0 0.8em 2.0em rgba(14,165,233,0.12);
-            color: white !important;
-            font-weight: 600;
-            padding: 0.8em 1em;
-            text-decoration: none;
-            transition: transform .12s, box-shadow .12s;
-        }
-
+        
         main{
             margin: 0 auto;
             max-width: var(--max-width);
@@ -199,7 +239,6 @@
         section{
             background: white;
             border-radius: 1em;
-            box-shadow: 0 0.4em 1.2em rgba(2,6,23,0.04);
             margin-bottom: 1.8em;
             padding: 2.0em;
         }

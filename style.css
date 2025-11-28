@@ -1,6 +1,7 @@
  :root{
             --gap-side: 16px;
             --image-filter: grayscale(100%);
+            --hero-h: 30em;
             --max-width: 90em;
             --nav-height: 5em;
             --nav-radius: 0.8em;
@@ -82,40 +83,39 @@
 
         .img-principal {
             align-items: center;
+            aspect-ratio: 44 / 15;
+            background-color: #dedede;
             background-image: url('./src/image/img-principal.jpg');
-            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 2rem;
+            background-size: cover;
             box-shadow: 0 10px 40px rgba(0,0,0,0.12);
             clip-path: path("M40,0H1368A40,40 0,0,1 1408,40V440A40,40 0,0,1 1368,480H497A47,47 0,0,1 450,433V427A47,47 0,0,0 403,380H47A47,47 0,0,1 0,333V40A40,40 0,0,1 40,0Z");
-            width: 1408px;
-            height: 480px;
-            background-color: #dedede;
-            aspect-ratio: 44 / 15;
-            mask-size: 100% 100%;
             display: flex;
             justify-content: center;
+            height: 480px;
             left: 50%;
-            margin: 0;
+            margin: 0 0 calc(var(--hero-h) * -0.15) 0;
+            mask-size: 100% 100%;
             max-width: var(--max-width);
-            position: relative;
             overflow: hidden;
-            width: calc(100% - (var(--gap-side) * 2));
-            top: calc(var(--nav-height) + 2.4em);
+            position: relative;
             transform: translateX(-50%);
+            top: calc(var(--nav-height) + 2.4em);
+            width: calc(100% - (var(--gap-side) * 2));
         }
 
         .conteudo-principal {
-            position: relative;
-            display: flex;              
-            justify-content: center;     
             align-items: center;        
+            display: flex;              
+            position: relative;
+            justify-content: center;     
             flex-direction: column;           
             padding: 2em;                           
         }
 
-        .conteudo-principal .img- {
+        .conteudo-principal .img-principal {
             /* Faz deste div a referência para o botão absoluto */
             position: relative; 
             width: 100%;
@@ -125,46 +125,17 @@
             margin-bottom: 50px;    
         }
 
-        .btn-explore{
-            /* POSICIONAMENTO */
-            position: absolute;
-            bottom: 8.5em; /* 20px acima da base do contêiner pai */
-            z-index: 5%; /* Garante que fique acima de outros elementos */
-           
-            /* ESTILIZAÇÃO */
-            background-color: #A0AA29; /* Laranja da imagem */
-            color: white;
-            padding: 2em 6em;
-            border: none;
-            cursor: pointer;
-            font-weight: 100;
-            
-            /* Formato: Arredondamento maior na direita para simular o da foto */
-            border-radius: 3em; 
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-
-
         .tips-section {
-            margin: 4rem auto;
-            padding: 3rem;
+            position: relative; /* necessário para que o botão posicionado absolutamente fique dentro do container */
+            z-index: 20;
+            margin: 3rem auto;
+            padding: 2rem;
             display: flex;
             gap: 2rem;
             max-width: var(--max-width);
             align-items: center;
             justify-content: space-between;
             box-sizing: border-box;
-            box-shadow: 0 0.4em 1.2em rgba(2,6,23,0.04);
-            border-radius: 1em;
-        }
-
-        .img-tips:hover .img-top-tips {
-            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
-        }
-
-        .img-tips:hover .img-bottom-tips {
-            transform: scale(1.1); /* zoom de 110% ao passar o mouse */
-            transition-delay: 0.2s; /* delay de 0.2s para a imagem de baixo */
         }
 
         .text-tips {
@@ -175,31 +146,77 @@
             justify-content: center;
         }
 
+        .btn-explore{
+            position: absolute;
+            left: 2rem;                /* distância da borda esquerda do container */
+            top: 2rem;                 /* distância do topo do container */
+            z-index: 100;
+
+            background-color: #A0AA29;
+            color: #fff;
+            padding: 1.6rem 5.5rem;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 3em;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.12);
+        }
+
+               @media (max-width: 900px){
+            .tips-section::before{
+                left: 1rem;
+                top: calc(-1 * (var(--hero-h) * 0.14));
+                width: 260px;
+                height: calc(var(--hero-h) * 0.30);
+                border-radius: 60px;
+            }
+            .btn-explore{
+                left: calc(1rem + 12px);
+                top: calc(-1 * (var(--hero-h) * 0.10));
+                padding: 0.6rem 1.1rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ajuste para mobile very small */
+        @media (max-width: 430px){
+            .tips-section::before{
+                width: 200px;
+                height: 120px;
+                top: calc(-1 * (var(--hero-h) * 0.085));
+                left: 0.75rem;
+            }
+            .btn-explore{
+                left: 1rem;
+                top: calc(-1 * (var(--hero-h) * 0.06));
+                padding: 0.5rem 0.9rem;
+                font-size: 0.9rem;
+            }
+        }
+
         .img-tips {
             flex: 1;
             position: relative;
-            height: 500px;
-            transition: transform 0.5s ease;
+            height: 600px;
+            margin-top: 5rem;
         }
 
         .img-top-tips, .img-bottom-tips {
             border-radius: 1rem;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
             display: block;
-            height: 400px;
+            height: 500px;
+            width: 320px;
             object-fit: cover;
             position: absolute;
-            transition: transform 0.5s ease;
         } 
 
         .img-top-tips {
             right: 0;
-            top: 0;
-            z-index: 2;
+            bottom: 0;
         }
 
         .img-bottom-tips {
-            left: 0;
             bottom: 0;
             z-index: 0;
         }
@@ -211,7 +228,7 @@
             box-shadow: 0 0.4em 1.2em rgba(192, 191, 191, 0.04);
             height: 100%; 
             overflow: hidden;
-            padding: 20px;
+            padding: 10px;
             transition: transform .12s, box-shadow .12s;
         }
         
@@ -226,9 +243,6 @@
             transition: transform 0.5s ease;    
             width: 100%;
         }
-
-
-
         
         main{
             margin: 0 auto;

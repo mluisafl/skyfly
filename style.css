@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+
+:root {
+    --green: #00ff9f;
+}
+
+* {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+body {
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ===== CARDS SUAVES ===== */
+
+.smooth-card {
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.smooth-card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== TRANSIÇÕES GERAIS ===== */
+
+.transition-soft {
+    transition: all 0.4s ease;
+}
+
+.logo-font {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero-bg {
+    background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ff9f;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.green-glow {
+    text-shadow: 0 0 20px #00ff9f;
+}
+
+.section-header:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #00ff62;
+    bottom: -8px;
+    left: 0;
+}
+
+.hero-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Moldura estilo app */
+.mockup-frame {
+    width: 420px;
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #000;
+    transform: perspective(1000px) rotateY(-5deg) rotateX(3deg);
+}
+
+.mockup-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.4),
+        transparent 20%,
+        transparent 80%,
+        rgba(0,0,0,0.4)
+    );
+    pointer-events: none;
+}
+
+.mockup-scroll {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: scrollSite 12s ease-in-out infinite;
+}
+
+/* Animação */
+@keyframes scrollSite {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-55%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgb(0 255 159 / 0.15);
+}
+
+.stat-number {
+    font-variant-numeric: tabular-nums;
+}
+
+.team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 9999px;
+    object-fit: cover;
+    border: 2px solid #00ff9f;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYFLY | Viagens e Refúgios Escondidos</title>
+    <link rel="stylesheet" href="./dist/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<body class="bg-white dark:bg-[#18181b] text-zinc-900 dark:text-white">
+    <!-- NAVBAR -->
+    <nav class="bg-white dark:bg-[#18181b] border-b border-zinc-200 dark:border-zinc-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <span class="text-3xl font-bold tracking-tighter">SKYFLY</span>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#destinos" class="hover:text-sky-600 dark:hover:text-sky-400">Destinos</a>
+                <a href="#servicos" class="hover:text-sky-600 dark:hover:text-sky-400">Serviços</a>
+                <a href="#sobre" class="hover:text-sky-600 dark:hover:text-sky-400">Sobre Nós</a>
+                <a href="#contato" class="hover:text-sky-600 dark:hover:text-sky-400">Contato</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button id="dark-toggle"
+                    class="w-10 h-10 flex items-center justify-center rounded-2xl hover:bg-zinc-100 dark:hover:bg-zinc-800">
+                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
+                </button>
+                <a href="#contato"
+                    class="bg-black dark:bg-white dark:text-black text-white px-6 py-3 rounded-3xl text-sm font-medium">Agendar
+                    Viagem</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="hero-bg h-screen flex items-center relative">
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent dark:from-[#18181b]/90"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-white">
+            <div class="max-w-2xl hero-content">
+                <h1 class="text-6xl md:text-7xl font-semibold leading-none tracking-tighter">
+                    Descubra os Refúgios<br>Escondidos do Brasil
+                </h1>
+                <p class="mt-6 text-xl text-white/90">Viagens premium e experiências de descanso verdadeiro.</p>
+                <a href="#sobre"
+                    class="mt-10 inline-flex bg-white text-black px-8 py-4 rounded-3xl text-lg font-medium items-center gap-3 hover:scale-105">
+                    Nossa História
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- DESTINOS EM DESTAQUE -->
+    <section id="destinos" class="max-w-7xl mx-auto px-6 py-16">
+        <h2 class="text-4xl font-semibold mb-8">Destinos em Destaque</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="group bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm">
+                <img src="https://picsum.photos/id/1015/800/600" alt="Costa Esmeralda"
+                    class="w-full aspect-video object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold">Costa Esmeralda • SP</h3>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">Refúgios à beira-mar</p>
+                </div>
+            </div>
+            <div class="group bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm">
+                <img src="https://picsum.photos/id/233/800/600" alt="Mantiqueira"
+                    class="w-full aspect-video object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold">Serra da Mantiqueira • MG</h3>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">Casas com vista para as montanhas</p>
+                </div>
+            </div>
+            <div class="group bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm">
+                <img src="https://picsum.photos/id/291/800/600" alt="Chapada" class="w-full aspect-video object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold">Chapada dos Veadeiros • GO</h3>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">Integração com a natureza</p>
+                </div>
+            </div>
+            <div class="group bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden shadow-sm">
+                <img src="https://picsum.photos/id/80/800/600" alt="Gramado" class="w-full aspect-video object-cover">
+                <div class="p-5">
+                    <h3 class="font-semibold">Gramado • RS</h3>
+                    <p class="text-sm text-zinc-500 dark:text-zinc-400">Refúgios de inverno acolhedores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="bg-zinc-100 dark:bg-zinc-900 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold mb-12 text-center">Serviços de Viagem que Facilitam seu Descanso</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1015/600/400" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-mono">01</div>
+                        <h3 class="font-semibold text-xl mt-1">Viagens Personalizadas</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-3">Refúgios exclusivos feitos sob medida
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/1016/600/400" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-mono">02</div>
+                        <h3 class="font-semibold text-xl mt-1">Experiências de Descanso</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-3">Silêncio, natureza e reconexão total
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/13/600/400" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-mono">03</div>
+                        <h3 class="font-semibold text-xl mt-1">Integração com a Natureza</h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-3">Viagens que reconectam corpo e mente
+                        </p>
+                    </div>
+                    </div>
+                    <div class="bg-white dark:bg-zinc-800 rounded-3xl overflow-hidden">
+                    <img src="https://picsum.photos/id/193/600/400" class="w-full aspect-video object-cover">
+                    <div class="p-6">
+                        <div class="text-xs font-mono">04</div>
+                        <h3 class="font-semibold text-xl mt-1">Veja lugares inesquecíveis </h3>
+                        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-3">Experiências que ficam para sempre na memória
+                        </p>
+                    </div>
+                    </div>
+    </section>
+
+    <!-- SOBRE NÓS - HISTÓRIA + TRANSIÇÃO -->
+    <section id="sobre" class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-5">
+                <div class="sticky top-28">
+                    <h2 class="text-5xl font-semibold tracking-tighter mb-8">Como a SKYFLY começou</h2>
+                    <div class="space-y-8 text-lg leading-relaxed text-zinc-600 dark:text-zinc-400">
+                        <p>Em 2018, Lucas Mendes era um arquiteto de sucesso em São Paulo, sempre
+                            correndo contra o tempo.</p>
+                        <p class="font-medium text-sky-600 dark:text-sky-400">Tudo mudou numa viagem
+                            solitária para as montanhas de Minas Gerais.</p>
+                        <p>Sentado à beira de um lago ao pôr do sol, ele percebeu que o mundo precisava
+                            de refúgios que devolvessem paz e silêncio.</p>
+                        <p>Nasceu ali a <span class="font-semibold text-black dark:text-white">SKYFLY</span>: uma
+                            empresa de viagens especializada em refúgios exclusivos e experiências de
+                            descanso verdadeiro.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 relative h-[620px] rounded-3xl overflow-hidden shadow-2xl">
+                <div id="ambiente-inicio" class="absolute inset-0 transition-all duration-1000 ease-out">
+                    <img src="https://picsum.photos/id/1005/1200/900" alt="Início" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent">
+                    </div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <p class="text-xs tracking-widest">2018 • SÃO PAULO</p>
+                        <p class="text-2xl font-medium">O momento que mudou tudo</p>
+                    </div>
+                </div>
+                <div id="ambiente-hoje" class="absolute inset-0 opacity-0 transition-all duration-1000 ease-out">
+                    <img src="https://picsum.photos/id/1015/1200/900" alt="Hoje" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent">
+                    </div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <p class="text-xs tracking-widest">HOJE • BRASIL</p>
+                        <p class="text-2xl font-medium">Refúgios que inspiram descanso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-20 bg-white dark:bg-[#18181b] text-center">
+        <h2 class="text-5xl font-semibold tracking-tighter">Pronto para a sua próxima viagem de
+            descanso?</h2>
+        <button onclick="alert('Consulta agendada com sucesso! 🎉')"
+            class="mt-12 mx-auto block bg-black dark:bg-white dark:text-black text-white px-12 py-6 rounded-3xl text-2xl font-medium hover:scale-105">
+            Agendar Consulta Gratuita
+        </button>
+    </section>
+
+    <footer class="bg-[#18181b] text-white py-12 text-center text-sm">
+        © 2026 SKYFLY • Viagens e Refúgios Exclusivos • Minas Gerais, Brasil
+    </footer>
+
+    </section>
+</body>
+
+</html>

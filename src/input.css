@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 400ms;
+  }
+}
+
+.hero-bg {
+  background-image: url('https://picsum.photos/id/1015/2000/1200'); /* Claro - dia */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.dark .hero-bg {
+  background-image: url('https://picsum.photos/id/1005/2000/1200'); /* Escuro - mood Archain */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Overlay mais dramático no dark mode (estilo Archain) */
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.75), rgba(0,0,0,0.35));
+  pointer-events: none;
+}
+
+.dark .hero-bg::after {
+  background: linear-gradient(to right, rgba(24,24,27,0.92), rgba(24,24,27,0.45));
+}
